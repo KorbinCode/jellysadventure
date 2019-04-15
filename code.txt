@@ -1,0 +1,1007 @@
+title Jelly's Adventure part 2
+author Margo Heiner
+field_of_view 100
+view_pitch -45
+view_height 0.9
+fog_power 0.2
+view_distance 10
+background_color gray
+Text_color blue
+gradient_top white
+realtime_interval 1
+key_repeat_interval 0.25
+========
+OBJECTS
+========
+loader
+transparent
+
+hud
+hud
+blue lightgreen
+01010101010101010101010101010101010101010101
+10101010101010101010101010101010101010101010
+01........................................01
+10........................................10
+01........................................01
+10........................................10
+01........................................01
+10........................................10
+01........................................01
+10........................................10
+01........................................01
+10........................................10
+01........................................01
+10........................................10
+01........................................01
+10........................................10
+01........................................01
+10........................................10
+01........................................01
+10........................................10
+01........................................01
+10........................................10
+01........................................01
+10........................................10
+01........................................01
+10........................................10
+01........................................01
+10........................................10
+01........................................01
+10........................................10
+01........................................01
+10........................................10
+01........................................01
+10........................................10
+01010101010101010101010101010101010101010101
+10101010101010101010101010101010101010101010
+
+Crate
+voxel
+brown
+...
+...
+...
+&
+...
+00.
+00.
+&
+...
+00.
+00.
+
+Background2
+sandwich
+gray darkgray white lightgray
+33033
+33033
+00000
+33033
+33033
+&
+00120
+00100
+11111
+00122
+00120
+
+Background1
+black
+
+
+
+Target
+#fc4b4e
+0...0
+.0.0.
+..0..
+.0.0.
+0...0
+
+secretWall
+wall
+yellow darkbrown
+00010
+11111
+01000
+11111
+00010
+
+Wall
+wall
+yellow darkbrown
+00010
+11111
+01000
+11111
+00010
+
+keyJelly
+motionvoxel
+doublestep
+lightgreen blue brown yellow
+.
+&
+.
+&
+.
+&
+.....
+.000.
+.000.
+.202.
+.....
+&
+.1.1.
+1...3
+....3
+1...3
+.1.1.
+
+Jelly
+motionvoxel
+doublestep
+lightgreen blue brown
+.
+&
+.
+&
+.
+&
+.....
+.000.
+.000.
+.202.
+.....
+&
+.1.1.
+1...1
+.....
+1...1
+.1.1.
+
+DeadPlayer
+facingvoxel
+lightgreen blue brown
+.
+&
+.
+&
+.
+&
+.1.1.
+1...1
+.....
+1...1
+.1.1.
+&
+.....
+.000.
+.000.
+.202.
+.....
+
+Pig
+facingvoxel
+purple pink black
+.....
+.....
+.000.
+.....
+.....
+&
+.....
+.....
+02120
+.....
+.....
+&
+.....
+.....
+01110
+.....
+.....
+&
+.....
+.....
+01110
+.....
+.....
+&
+.....
+.....
+.000.
+.....
+.....
+
+
+nicePig
+facingvoxel
+purple pink black
+.....
+.....
+.000.
+.....
+.....
+&
+.....
+.....
+02120
+.....
+.....
+&
+.....
+.....
+01110
+.....
+.....
+&
+.....
+.....
+01110
+.....
+.....
+&
+.....
+.....
+.000.
+.....
+.....
+
+
+unkillablePig
+facingvoxel
+black red gray
+.....
+.....
+.000.
+.....
+.....
+&
+.....
+.....
+02120
+.....
+.....
+&
+.....
+.....
+01110
+.....
+.....
+&
+.....
+.....
+01110
+.....
+.....
+&
+.....
+.....
+.000.
+.....
+.....
+
+
+StationiaryPig
+FACINGVOXEL
+purple pink black
+(ayy lmao)
+.....
+.....
+.000.
+.....
+.....
+&
+.....
+.....
+02120
+.....
+.....
+&
+.....
+.....
+01110
+.....
+.....
+&
+.....
+.....
+01110
+.....
+.....
+&
+.....
+.....
+.000.
+.....
+.....
+
+
+StationiaryUnkillablePig
+FACINGVOXEL
+black red gray
+.....
+.....
+.000.
+.....
+.....
+&
+.....
+.....
+02120
+.....
+.....
+&
+.....
+.....
+01110
+.....
+.....
+&
+.....
+.....
+01110
+.....
+.....
+&
+.....
+.....
+.000.
+.....
+.....
+
+
+Testenemy
+FACINGVOXEL
+black white
+.....
+.....
+.000.
+.....
+.....
+&
+.....
+.....
+01110
+.....
+.....
+&
+.....
+.....
+01110
+.....
+.....
+&
+.....
+.....
+01110
+.....
+.....
+&
+.....
+.....
+.000.
+.....
+.....
+
+Exit1
+sprite
+#000000
+
+Lexitfake
+wall
+BROWN #FFFF00 YELLOW DARKBROWN
+20002
+30003
+20012
+30003
+20002
+
+Lexit
+wall
+BROWN #FFFF00 YELLOW DARKBROWN
+20002
+30003
+20012
+30003
+20002
+afterexit
+DARKBROWN
+
+Sadee
+FACINGVOXEL
+Brown lightbrown purple #ffeebb
+.....
+.....
+.000.
+.....
+.....
+&
+.....
+.000.
+00000
+.000.
+.....
+&
+.000.
+00000
+03330
+01310
+.....
+&
+.....
+.222.
+02220
+.222.
+.....
+&
+.....
+.222.
+32223
+.222.
+.....
+&
+.....
+.....
+.....
+.0.0.
+.0.0.
+
+otherway
+wall
+black white
+110011
+101101
+101101
+101101
+000101
+101101
+
+Pigfollower
+facingvoxel
+doublestep
+purple pink black
+.....
+.....
+.000.
+.....
+.....
+&
+.....
+.....
+02120
+.....
+.....
+&
+.....
+.....
+01110
+.....
+.....
+&
+.....
+.....
+01110
+.....
+.....
+&
+.....
+.....
+.000.
+.....
+.....
+
+key0
+voxel
+#FFFF00
+.
+&
+.
+&
+.
+&
+.
+&
+.
+&
+.
+&
+.
+&
+.
+&
+.
+&
+.
+&
+.
+&
+.
+&
+.
+&
+.
+&
+.
+&
+.
+&
+..0000..
+.0....0.
+.0....0.
+.0....0.
+..0000..
+...0....
+...00...
+...0....
+...000..
+
+slop
+voxel
+gray brown
+.....
+.....
+.000.
+.....
+.....
+&
+.....
+.....
+0...0
+.....
+.....
+&
+.....
+.....
+0...0
+.....
+.....
+&
+00000
+01110
+01110
+01110
+00000
+&
+00000
+01110
+01110
+01110
+00000
+
+tombstone
+voxel
+gray
+.....
+.....
+.000.
+.....
+.....
+&
+.....
+.....
+00000
+.....
+.....
+&
+.....
+.....
+00000
+.....
+.....
+&
+00000
+00000
+00000
+00000
+00000
+
+=======
+LEGEND
+=======
+f = afterexit
+. = Background2
+# = Wall
+O = Target
+P = Pig
+j = Jelly and background2
+player = Jelly or KeyJelly or deadplayer
+enemy = StationiaryPig or Pig
+e = exit1
+s = Sadee
+T = testenemy
+A = StationiaryPig
+, = Background1
+z = unkillablePig
+background = background2
+w = otherway
+exit = exit1 or slop or secretwall
+c = Lexit
+k = key0 and background2
+keyplayer = keyJelly
+key = key0
+h = hud and background2
+aliveplayer = jelly or keyjelly
+@ = stationiaryunkillablepig
+9 = Crate and Target
+* = Crate
+n = nicepig
+b = loader
+x = slop
+1 = lexitfake
+m = tombstone
+q = secretwall
+2 = pigfollower
+=======
+SOUNDS
+=======
+SFX0 35949304
+Player MOVE 37438104
+sfx1 83863700
+sfx2 2868502
+sfx3 999999999999999999999999999999999999
+Crate MOVE 36772507
+sfx4 97127908
+sfx5 95019304
+
+================
+COLLISIONLAYERS
+================
+
+
+Background1
+background2
+hud
+Pigfollower
+loader
+afterexit
+Target, exit, key0, slop, secretwall
+Player, Wall, Deadplayer, pig, jelly, Sadee, Testenemy, StationiaryPig, unkillablePig, otherway, stationiaryunkillablepig, Crate, nicepig, lexitfake, lexit, tombstone,
+======
+RULES
+======
+[ >  aliveplayer | Pig ] -> [  DeadPlayer | Pig ] sfx0
+[ > player | Exit ] -> [ > player | Exit ] sfx1
+[ stationary Pig ] -> [randomDir Pig]
+[ Action Player | Sadee ] -> [  message hey yall! im sadee, the artist!
+[ Action Player | testenemy ] -> [  message Hello, i am Testenemy, the original enemy for this game! Don't worry, I won't hurt you.
+[ >  alivePlayer | StationiaryPig ] -> [  DeadPlayer | StationiaryPig ] sfx0
+[ Action  Player | StationiaryPig ] -> [ action Player | background2 ] sfx0
+[ Action  Player | Pig ] -> [ action Player | Background2 ] sfx0
+[ >  alivePlayer | unkillablePig ] -> [  DeadPlayer | unkillablePig ] sfx0
+[ stationary unkillablePig ] -> [randomDir unkillablePig]
+[ > jelly | Lexit ] -> [ stationary jelly | Lexit ] sfx5 message locked.
+[ > jelly | key ] -> [ stationary keyjelly | background2 ] sfx1 message You got a Key!
+[ > keyjelly | Lexit ] -> [ stationary jelly | exit1 ] sfx4 message You unlocked the door.
+[ >  keyPlayer ] -> [  >  keyjelly ]
+[ down  keyPlayer ] -> [  down  keyJelly ]
+[ left  keyPlayer ] -> [  left  keyJelly ]
+[ up  keyplayer ] -> [  up  keyJelly ]
+[ moving deadplayer ] -> [ stationary deadplayer ]
+[ >  alivePlayer | stationiaryunkillablePig ] -> [  DeadPlayer | stationiaryunkillablePig ] sfx0
+[ >  keyPlayer | Crate ] -> [  >  keyPlayer | > Crate  ]
+[ >  jelly | Crate ] -> [  >  jelly | > Crate  ]
+[ > jelly | Lexitfake ] -> [ stationary jelly | Lexitfake ] sfx5 message locked.
+[ action player | tombstone ] -> [ stationary player | tombstone ] message Here lies your sanity. also try walking into the wall behind you in the long hallway next time for a shortcut.
+[ > keyplayer | Lexitfake ] -> [ stationary keyplayer | Lexitfake ] sfx5 message doesn't fit.
+==============
+WINCONDITIONS
+==============
+
+any player on Exit
+
+=======
+LEVELS
+=======
+########
+#2j....#
+########
+(########.
+#kao@st#.
+#......#.
+#.*j...eh
+#......eh
+#......#h
+########h)
+
+message Woah! That was scary. Note to self...avoid black holes.
+
+hhhhhhhhhhhhh
+h#######c###h
+h##K.##..###h
+h#.........#h
+h#.##..##..#h
+h#.........#h
+h##..##..###h
+h#.........#h
+h#j##..##..#h
+h###########h
+hhhhhhhhhhhhh
+message hey come over here
+message why
+message i need slop
+message can you get some for me
+message why cant you do it
+message the programmer did not code me to be able to move
+
+hhhhhhh
+h#####h
+h#.n.#h
+h#...1h
+h#.j.#h
+h##e##h
+hhhhhhh
+
+message DISCLAIMER: Jelly is a professional runner. never run for this long.
+.hhhhh.
+.h###h.
+.h#e#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#j#h.
+.h#q#h.
+.hhhhh.
+
+.hhhhh.
+.h###h.
+.h#e#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#j#h.
+.h#q#h.
+.hhhhh.
+
+.hhhhh.
+.h###h.
+.h#e#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#j#h.
+.h#q#h.
+.hhhhh.
+
+.hhhhh.
+.h###h.
+.h#e#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#j#h.
+.h#q#h.
+.hhhhh.
+
+.hhhhh.
+.h###h.
+.h#e#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#j#h.
+.h#q#h.
+.hhhhh.
+
+.hhhhh.
+.h###h.
+.h#e#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#j#h.
+.h#q#h.
+.hhhhh.
+
+.hhhhh.
+.h###h.
+.h#e#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#j#h.
+.h#q#h.
+.hhhhh.
+.......
+
+.hhhhh.
+.h###h.
+.h#e#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#j#h.
+.h#q#h.
+.hhhhh.
+message ok this is the last one
+.hhhhh.
+.h###h.
+.h#e#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#.#h.
+.h#j#h.
+.h#q#h.
+.hhhhh.
+
+...........
+.hhhhhhhhh.
+.h#######h.
+.h#..x..#h.
+.h#.....#h.
+.h#....m#h.
+.h#.#####h.
+.h#.#hhhhh.
+.h#.#h.....
+.h#.#h.....
+.h#.#h.....
+.h#.#h.....
+.h#.#h.....
+.h#.#h.....
+.h#.#h.....
+.h#.#h.....
+.h#.#h.....
+.h#.#h.....
+.h#.#h.....
+.h#.#h.....
+.h#.#h.....
+.h#.#h.....
+.h#.#h.....
+.h#.#h.....
+.h#.#h.....
+.h#.#h.....
+.h#j#h.....
+.h###h.....
+.hhhhh.....
+...........
+
+message 10 hours later
+message thanks
+message have this key
+message pig joined the team!
+
+hhhhhhh
+h#####h
+h#.n.#h
+h#.k.ch
+h#.j.#h
+h##1##h
+hhhhhhh
+message go to part 3 because this coding language makes no sense
+
+
+
+
+
+
+
